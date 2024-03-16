@@ -68,6 +68,7 @@ do_install_ptest() {
 	sed -e 's,--sysroot=${STAGING_DIR_TARGET},,g' \
 	    -e 's|${DEBUG_PREFIX_MAP}||g' \
 	    -e 's:${HOSTTOOLS_DIR}/::g' \
+	    -e 's:${BUILD_LDFLAGS}/::g' \
 	    -e 's:${RECIPE_SYSROOT_NATIVE}::g' \
 	    -e 's:${BASE_WORKDIR}/${MULTIMACH_TARGET_SYS}::g' \-e 's/^Makefile:/_Makefile:/' \
 	    -e 's/^srcdir = \(.*\)/srcdir = ./' -e 's/^top_srcdir = \(.*\)/top_srcdir = ./' \
